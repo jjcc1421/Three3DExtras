@@ -1,0 +1,26 @@
+{
+  "name": "Three3DExtras",
+  "homepage": "https://github.com/jjcc1421/Three3DExtras",
+  "authors": [
+    "Juan Caicedo <jjcc1421@gmail.com>"
+  ],
+  "description": "Extras three 3d project",
+  "main": "three3DExtras.min.js",
+  "moduleType": [],
+  "keywords": [
+    "three3d",
+    "lines",
+    "extras"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "three.js": "threejs#*"
+  }
+}

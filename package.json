@@ -1,0 +1,31 @@
+{
+  "name": "three-3d-extras",
+  "version": "1.0.0",
+  "description": "Threejs 3d extras ",
+  "main": "three3DExtras.min.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjcc1421/Three3DExtras.git"
+  },
+  "keywords": [
+    "three3d",
+    "three",
+    "3d",
+    "extras",
+    "line",
+    "three",
+    "3d"
+  ],
+  "author": "Juan Caicedo <jjcc1421@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjcc1421/Three3DExtras/issues"
+  },
+  "homepage": "https://github.com/jjcc1421/Three3DExtras#readme"
+}
