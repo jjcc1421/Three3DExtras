@@ -4,7 +4,6 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-wiredep');
     grunt.loadNpmTasks('grunt-auto-install');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-open');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-include-source');
@@ -15,19 +14,6 @@ module.exports = function (grunt) {
             task: {
                 src: ['RepresentacionSVE/WebContent/index.html', 'RepresentacionSVE/WebContent/indexTest.html', 'index.html', 'help.html']
             }
-        },
-        watch: {
-
-            scripts: {
-
-                files: ['app/**/*.js'],
-                tasks: ['includeSource:dev'],
-                options: {
-                    spawn: false,
-                }
-
-            } //scripts
-  
         },
         auto_install: {
             subdir: {
