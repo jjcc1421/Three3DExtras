@@ -3,18 +3,39 @@
  */
 if (!three3DExtras) {
     var three3DExtras = {
-        line: function (origin, destination, weight = 1, color = '#000') {
+        /**
+         * Instance a 3d line
+         * @param origin array[int, int, int]
+         * @param destination array[int, int, int]
+         * @param weight double
+         * @oaran color #hexColor
+         */
+        tubeLine: function (origin, destination, weight = 1, color = '#000') {
             this.origin = origin;
             this.destination = destination;
             this.weight = weight;
             this.color = color;
-            this.object3D = function () {
-                var bigLine = new THREE.CatmullRomCurve3([
-                    new THREE.Vector3(parseInt(posOrigin[0]), parseInt(posOrigin[1]), parseInt(posOrigin[2])),
-                    new THREE.Vector3(parseInt(posDest[0]), parseInt(posDest[1]), parseInt(posDest[2])),
-                ]);
-                return THREE;
+            this.getObject3D = function () {
+
             }
+            var line = new THREE.CatmullRomCurve3([
+                new THREE.Vector3(origin[0], origin[1], origin[2]),
+                new THREE.Vector3(destination[0], destination[1], destination[2]),
+            ]);
+            var geometryTube = new THREE.TubeGeometry(
+                line,  //path
+                1,    //segments
+                weight,     //radius
+                8,     //radiusSegments
+                false  //closed
+                );
+            var material = new THREE.MeshBasicMaterial({
+                color: color,
+                wireframe: false,
+                transparent: true,
+                //opacity:0.5
+            });
+            this.getObject3D = new THREE.Mesh(geometryTube, material);
         }
     }
 }
