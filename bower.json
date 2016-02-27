@@ -21,6 +21,15 @@
     "tests"
   ],
   "dependencies": {
-    "three.js": "threejs#*"
+    "three.js": "threejs#*",
+    "OrbitControls": "http://threejs.org/examples/js/controls/OrbitControls.js",
+    "jquery": "^2.2.1"
+  },
+  "overrides": {
+    "THREEOrbitControls": {
+      "main": [
+        "index.js"
+      ]
+    }
   }
 }

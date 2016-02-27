@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         wiredep: {
             task: {
-                src: ['RepresentacionSVE/WebContent/index.html', 'RepresentacionSVE/WebContent/indexTest.html', 'index.html', 'help.html']
+                src: ['app/index.html']
             }
         },
         auto_install: {
@@ -49,32 +49,15 @@ module.exports = function (grunt) {
         },
         includeSource: {
             options: {
-                //basePath: 'RepresentacionSVE/WebContent/',
-                //baseUrl: 'RepresentacionSVE/WebContent/',
+                basePath: 'app',
+                baseUrl: '',
             },
             dev: {
                 //basePath:'',
                 files: {
-                    'index.html': 'index.html'
+                    'app/index.html': 'app/index.html'
                 }
             },
-            devHelp: {
-                files: {
-                    'help.html': 'help.html'
-                }
-            },
-            devFAS: {
-                files: {
-                    'graficas.html': 'graficas.html'
-                }
-            },
-            dist: {
-                //basePath:'',
-                files: {
-                    'dist.html': 'dist.html'
-                }
-            },
-
         },
         uglify: {
             options: {
@@ -103,9 +86,6 @@ module.exports = function (grunt) {
     });
 
 
-    grunt.registerTask('default', ['wiredep', 'includeSource:dev', 'includeSource:devFAS']);
-    grunt.registerTask('graficas', ['includeSource:devGraph']);
-    grunt.registerTask('install', ['auto_install', 'wiredep']);
-    grunt.registerTask('dist', ['uglify', 'includeSource:dist']);
+    grunt.registerTask('default', ['wiredep', 'includeSource:dev']);
 
 };
