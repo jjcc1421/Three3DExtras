@@ -8,7 +8,7 @@
 if (three3DExtras) {
     if (!three3DExtras.tubeLine) {
         three3DExtras.tubeLine = function (origin, destination, weight, color) {
-            weight = weight ? 1 : weight;
+            weight = weight ? weight : 1;
             color = color ? color : "#000";
             this.origin = origin;
             this.destination = destination;
@@ -26,7 +26,7 @@ if (three3DExtras) {
                 1,    //segments
                 this.weight,     //radius
                 8,     //radiusSegments
-                true  //closed
+                false  //closed
                 );
             var material = new THREE.MeshBasicMaterial({
                 color: this.color,

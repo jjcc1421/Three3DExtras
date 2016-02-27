@@ -21,8 +21,13 @@
     <script src="tubeLine.js"></script>
     <!-- /include -->
     <script>
-       var line=new three3DExtras.tubeLine([-1,-1,0],[1,1,0],0.2,'#FFF');
+        var line=new three3DExtras.tubeLine([-1,-1,0],[1,1,0],0.02,'#FFF');
+       var line2=new three3DExtras.tubeLine([-1,0,0],[1,0,0],0.02,'#E3DC1C');
+        var line3=new three3DExtras.tubeLine([-1,0,1],[1,0,1],0.02,'#B02735');
        scene.add(line.getObject3D());
+       scene.add(line2.getObject3D());
+       scene.add(line3.getObject3D());
+       render();
     </script>
 </body>
 
