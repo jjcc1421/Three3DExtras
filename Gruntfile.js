@@ -67,14 +67,10 @@ module.exports = function (grunt) {
             },
             my_target: {
                 files: {
-                    'dist/js/sve.min.js': ['bower_components/jquery/dist/jquery.js',
-                        'bower_components/bootstrap/dist/js/bootstrap.js',
-                        'bower_components/three.js/build/three.js',
-                        'bower_components/OrbitControls/index.js',
-                        'bower_components/immutable/dist/immutable.js',
-                        'assets/js/**/*.js',
-                        'bower_components/loaders.css/loaders.css.js',
-                        'app/**/*.js'],
+                    'three3DExtras.min.js': [
+                        'app/three3DExtras.js',
+                        'app/tubeLine.js'
+                    ],
                 }
             }
         },
@@ -87,5 +83,6 @@ module.exports = function (grunt) {
 
 
     grunt.registerTask('default', ['wiredep', 'includeSource:dev']);
+    grunt.registerTask('dist', ['uglify']);
 
 };
