@@ -1,10 +1,12 @@
 # Three3DExtras
 ## About
-Is an three js helpful basics methods.
-##Usage 
-Include 
+Is an three.js helpful basics methods.
 
-    <script src="three3DExtras.min.js"></script>
+## Usage 
+Include dependency
+``` html
+<script src="three3DExtras.min.js"></script>
+```
     
 
 ### Example create line using tube geometry
